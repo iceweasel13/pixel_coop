@@ -31,7 +31,7 @@ export default async function RootLayout(props: { children: ReactNode }) {
          
            <SidebarProvider>
       <AppSidebar />
-      <main>
+      <main className="flex-1 w-full">
         <SidebarTrigger /> {props.children}
         </main>
     </SidebarProvider>
