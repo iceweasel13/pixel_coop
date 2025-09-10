@@ -17,46 +17,65 @@ const farmStats: FarmStats = {
 };
 
 const farmPlots: FarmPlot[] = [
-    { id: 1, status: 'occupied', chicken: { name: 'Normal Tavuk', imageUrl: '/chickens/1.png' } },
-    { id: 2, status: 'occupied', chicken: { name: 'Hızlı Tavuk', imageUrl: '/chickens/1.png' } },
-    { id: 3, status: 'occupied', chicken: { name: 'Süper Tavuk', imageUrl: '/chickens/1.png' } },
-    { id: 4, status: 'empty' },
-    { id: 5, status: 'empty' },
-    { id: 6, status: 'empty' },
-    { id: 7, status: 'locked' },
-    { id: 8, status: 'locked' },
-    { id: 9, status: 'locked' },
-    { id: 10, status: 'locked' },
-    { id: 11, status: 'locked' },
-    { id: 12, status: 'locked' },
+  { id: 1, status: 'occupied', chicken: { name: 'Normal Tavuk', imageUrl: '/chickens/2.png' } },
+  { id: 2, status: 'occupied', chicken: { name: 'Hızlı Tavuk', imageUrl: '/chickens/2.png' } },
+  { id: 3, status: 'occupied', chicken: { name: 'Süper Tavuk', imageUrl: '/chickens/1.png' } },
+  { id: 4, status: 'empty' },
+  { id: 5, status: 'empty' },
+  { id: 6, status: 'empty' },
+  { id: 7, status: 'locked' },
+  { id: 8, status: 'locked' },
+  { id: 9, status: 'locked' },
+  { id: 10, status: 'locked' },
+  { id: 11, status: 'locked' },
+  { id: 12, status: 'locked' },
 ];
-
 
 export default function FarmPage() {
   return (
-    <div className="container mx-auto p-4 sm:p-6 lg:p-8">
+    <div className="w-full">
       {/* Üst İstatistik Alanı */}
-      <section>
-        <h2 className="text-2xl font-bold">Stats</h2>
-        <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <MiningStatsCard 
-            dailyMining={farmStats.dailyMining} 
-            hashRate={farmStats.hashRate}
-            blocksUntilHalvening={farmStats.blocksUntilHalvening}
-          />
-          <ClaimCard minedEgg={farmStats.minedEgg} />
-          <CapacityCard spacesLeft={farmStats.spacesLeft} totalMhs={farmStats.totalMhs} />
-        </div>
-      </section>
+      <div
+        className="w-full bg-repeat-x bg-left py-8 sm:py-12 lg:py-16"
+        style={{
+          backgroundImage: "url(/a.png)",
+          backgroundSize: "auto 100%",
+        }}
+      >
+        <section className="p-4 sm:p-6 lg:p-8">
+          <h2 className="text-2xl font-bold">Stats</h2>
+          <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <MiningStatsCard
+              dailyMining={farmStats.dailyMining}
+              hashRate={farmStats.hashRate}
+              blocksUntilHalvening={farmStats.blocksUntilHalvening}
+            />
+            <ClaimCard minedEgg={farmStats.minedEgg} />
+            <CapacityCard
+              spacesLeft={farmStats.spacesLeft}
+              totalMhs={farmStats.totalMhs}
+            />
+          </div>
+        </section>
+      </div>
 
       {/* Alt Çiftlik Alanı */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold mb-4">Your Coop</h2>
-        {/* Burası ileride görsel bir kümes resmi ile değiştirilebilir */}
-        <div className="rounded-lg border bg-card p-4">
+      <div
+        className="w-full bg-repeat-x bg-left py-2 sm:py-3 lg:py-4"
+        style={{
+          backgroundImage: "url(/cc.png)",
+          backgroundSize: "auto",
+          backgroundRepeat: "repeat",
+          backgroundPosition: "left",
+        }}
+      >
+        <section className="mt-2 p-4 sm:p-6 lg:p-8">
+          <h2 className="text-2xl font-bold mb-4">Your Coop</h2>
+          <div className="rounded-lg p-4">
             <FarmGrid plots={farmPlots} />
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

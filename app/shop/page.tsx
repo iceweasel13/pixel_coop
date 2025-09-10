@@ -3,7 +3,7 @@ import { Chicken } from "@/types";
 
 // Satılacak tavukların listesi (Geçici Veri)
 const chickensForSale: Chicken[] = [
-  { id: 1, name: "Normal Tavuk", imageUrl: "/chickens/1.png", productionRate: 0.1, price: 8 },
+  { id: 1, name: "Normal Tavuk", imageUrl: "/chickens/2.png", productionRate: 0.1, price: 8 },
   { id: 2, name: "Hızlı Tavuk", imageUrl: "/chickens/1.png", productionRate: 0.2, price: 15 },
   { id: 3, name: "Süper Tavuk", imageUrl: "/chickens/1.png", productionRate: 0.5, price: 35 },
   { id: 4, name: "Altın Tavuk", imageUrl: "/chickens/1.png", productionRate: 1.2, price: 80 },
