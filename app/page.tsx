@@ -3,6 +3,7 @@ import { CapacityCard } from "@/components/farm/CapacityCard";
 import { ClaimCard } from "@/components/farm/ClaimCard";
 import { FarmGrid } from "@/components/farm/FarmGrid";
 import { MiningStatsCard } from "@/components/farm/MiningStatsCard";
+import NineSlicePanel from "@/components/ui/NineSlicePanel";
 import { FarmPlot, FarmStats } from "@/types";
 
 
@@ -71,11 +72,11 @@ export default function FarmPage() {
       >
         <section className="mt-2 p-4 sm:p-6 lg:p-8">
           <h2 className="text-2xl font-bold mb-4">Your Coop</h2>
-          <div className="rounded-lg p-4">
-            <FarmGrid plots={farmPlots} />
-          </div>
+          <NineSlicePanel slice={24}>
+              <FarmGrid plots={farmPlots} />
+          </NineSlicePanel>
         </section>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }

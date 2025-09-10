@@ -12,7 +12,7 @@ type Props = {
 export function FarmGrid({ plots }: Props) {
   return (
     <div
-      className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 p-4 rounded-lg"
+      className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 p-4"
       style={{
         backgroundImage: "url('/e.png')",
         backgroundSize: "cover",       // istersen 'repeat' yap
