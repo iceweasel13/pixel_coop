@@ -10,7 +10,13 @@ import { FarmPlot, FarmStats } from "@/types";
 export default function FarmPage() {
   return (
     <div className="w-full min-h-screen overflow-hidden">
-      <TiledMap src="/maps/level1.json" mode="contain" />
+      <TiledMap
+        src="/maps/level1.json"
+        mode="manual"
+        viewportPercent={200}
+        basis="width"
+        alignY="top"
+      />
     </div>
   );
 }
