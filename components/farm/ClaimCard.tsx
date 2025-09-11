@@ -1,7 +1,7 @@
 // components/farm/ClaimCard.tsx
 import { Button } from "@/components/ui/button";
 import { formatNumber } from "@/lib/utils";
-import NineSlicePanel from "../ui/NineSlicePanel";
+import WoodenPanel from "../ui/WoodenPanel";
 
 type Props = {
   minedEgg: number;
@@ -9,7 +9,7 @@ type Props = {
 
 export function ClaimCard({ minedEgg }: Props) {
   return (
-    <NineSlicePanel slice={24}>
+    <WoodenPanel slice={24}>
       <div className="flex flex-col justify-between p-4">
         <div>
           <p className="text-muted-foreground">You have mined</p>
@@ -17,6 +17,6 @@ export function ClaimCard({ minedEgg }: Props) {
         </div>
         <Button className="mt-4 w-full">CLAIM MINED $EGG</Button>
       </div>
-    </NineSlicePanel>
+    </WoodenPanel>
   );
 }

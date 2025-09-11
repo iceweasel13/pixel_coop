@@ -14,7 +14,7 @@ export function FarmGrid({ plots }: Props) {
     <div
       className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 p-4"
       style={{
-        backgroundImage: "url('/e.png')",
+        backgroundImage: "url('/wood.png')",
         backgroundSize: "cover",       // istersen 'repeat' yap
         backgroundRepeat: "repeat", // dokuysa 'repeat' yap
         backgroundPosition: "center",
@@ -25,7 +25,7 @@ export function FarmGrid({ plots }: Props) {
           key={plot.id}
           className="aspect-square"
           style={{
-            backgroundImage: "url('/d.png')",
+            backgroundImage: "url('/coop.png')",
             backgroundSize: "90% 90%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",

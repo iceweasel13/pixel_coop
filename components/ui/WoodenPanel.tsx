@@ -1,6 +1,6 @@
 import React from "react";
 
-type NineSlicePanelProps = {
+type WoodenPanelProps = {
   children: React.ReactNode;
   className?: string;
   // Kenar/köşe dilim kalınlığı (px). Görsellere göre ayarlayın.
@@ -8,8 +8,8 @@ type NineSlicePanelProps = {
 };
 
 // 9-parça panel: köşeler, kenarlar (tekrarlı), orta (tekrarlı)
-// Görsel yolları: public/b/*.png
-export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePanelProps) {
+// Görsel yolları: public/wooden_panel/*.png
+export function WoodenPanel({ children, className, slice = 64 }: WoodenPanelProps) {
   return (
     <div className={"relative " + (className ?? "")}>
       {/* Orta doku */}
@@ -20,7 +20,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
           left: slice / 2,
           right: slice / 2,
           bottom: slice / 2,
-          backgroundImage: "url(/b/orta_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_mid.png)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -34,7 +34,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
           left: slice,
           right: slice,
           height: slice,
-          backgroundImage: "url(/b/ust_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_top.png)",
           backgroundRepeat: "repeat-x",
           backgroundSize: `auto ${slice}px`,
           backgroundPosition: "top",
@@ -48,7 +48,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
           left: slice,
           right: slice,
           height: slice,
-          backgroundImage: "url(/b/alt_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_bottom.png)",
           backgroundRepeat: "repeat-x",
           backgroundSize: `auto ${slice}px`,
           backgroundPosition: "bottom",
@@ -62,7 +62,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
           top: slice,
           bottom: slice,
           width: slice,
-          backgroundImage: "url(/b/sol_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_left.png)",
           backgroundRepeat: "repeat-y",
           backgroundSize: `${slice}px auto`,
           backgroundPosition: "left",
@@ -76,7 +76,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
           top: slice,
           bottom: slice,
           width: slice,
-          backgroundImage: "url(/b/sag_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_right.png)",
           backgroundRepeat: "repeat-y",
           backgroundSize: `${slice}px auto`,
           backgroundPosition: "right",
@@ -89,7 +89,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
         style={{
           width: slice,
           height: slice,
-          backgroundImage: "url(/b/sol_ust_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_top_left.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: `${slice}px ${slice}px`,
         }}
@@ -99,7 +99,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
         style={{
           width: slice,
           height: slice,
-          backgroundImage: "url(/b/sag_ust_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_top_right.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: `${slice}px ${slice}px`,
         }}
@@ -109,7 +109,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
         style={{
           width: slice,
           height: slice,
-          backgroundImage: "url(/b/sol_alt_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_bottom_left.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: `${slice}px ${slice}px`,
         }}
@@ -119,7 +119,7 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
         style={{
           width: slice,
           height: slice,
-          backgroundImage: "url(/b/sag_alt_b.png)",
+          backgroundImage: "url(/wooden_panel/wooden_panel_bottom_right.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: `${slice}px ${slice}px`,
         }}
@@ -133,5 +133,5 @@ export function NineSlicePanel({ children, className, slice = 64 }: NineSlicePan
   );
 }
 
-export default NineSlicePanel;
+export default WoodenPanel;
 

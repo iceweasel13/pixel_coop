@@ -1,6 +1,6 @@
 // components/farm/CapacityCard.tsx
 import { ThumbsUp, Warehouse } from "lucide-react";
-import NineSlicePanel from "../ui/NineSlicePanel";
+import WoodenPanel from "../ui/WoodenPanel";
 
 type Props = {
   spacesLeft: number;
@@ -9,7 +9,7 @@ type Props = {
 
 export function CapacityCard({ spacesLeft, totalMhs }: Props) {
   return (
-    <NineSlicePanel slice={24}>
+    <WoodenPanel slice={24}>
       <div className="flex flex-col gap-4 p-4">
         <div className="flex items-center gap-3">
           <Warehouse className="h-5 w-5 text-muted-foreground" />
@@ -24,6 +24,6 @@ export function CapacityCard({ spacesLeft, totalMhs }: Props) {
           </p>
         </div>
       </div>
-    </NineSlicePanel>
+    </WoodenPanel>
   );
 }

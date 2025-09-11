@@ -3,7 +3,7 @@ import { CapacityCard } from "@/components/farm/CapacityCard";
 import { ClaimCard } from "@/components/farm/ClaimCard";
 import { FarmGrid } from "@/components/farm/FarmGrid";
 import { MiningStatsCard } from "@/components/farm/MiningStatsCard";
-import NineSlicePanel from "@/components/ui/NineSlicePanel";
+import WoodenPanel from "@/components/ui/WoodenPanel";
 import { FarmPlot, FarmStats } from "@/types";
 
 
@@ -39,7 +39,7 @@ export default function FarmPage() {
       <div
         className="w-full bg-repeat-x bg-left py-8 sm:py-12 lg:py-16"
         style={{
-          backgroundImage: "url(/a.png)",
+          backgroundImage: "url(/sky.png)",
           backgroundSize: "auto 100%",
         }}
       >
@@ -72,9 +72,9 @@ export default function FarmPage() {
       >
         <section className="mt-2 p-4 sm:p-6 lg:p-8">
           <h2 className="text-2xl font-bold mb-4">Your Coop</h2>
-          <NineSlicePanel slice={24}>
+          <WoodenPanel slice={24}>
               <FarmGrid plots={farmPlots} />
-          </NineSlicePanel>
+          </WoodenPanel>
         </section>
       </div >
     </div >
